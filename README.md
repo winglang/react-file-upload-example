@@ -1,5 +1,6 @@
 > [!WARNING]
-> This example is not functioning right now.
+> This example only works when deployed AWS using the `tf-aws` target.
+> It may not be supported by the Wing local simulator.
 
 An example of an app with a React front-end that allows users to upload files to an S3 bucket.
 
@@ -11,10 +12,9 @@ Prerequisites:
 - Set up an AWS account. 
 
 
-Set up and deploy to AWS:
+To build the project and deploy it to AWS:
 
 ```sh
-npm install
 cd website
 npm install
 npm run build

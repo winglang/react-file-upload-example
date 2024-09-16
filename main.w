@@ -4,7 +4,6 @@ bring fs;
 bring util;
 
 let bucket = new cloud.Bucket(public: true) as "UploadBucket";
-// let bucket = new aws.BucketRef("");
 
 let website = new cloud.Website(
   path: fs.join(@dirname, "./website/build"),
