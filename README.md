@@ -1,6 +1,6 @@
 > [!WARNING]
-> This example only works when deployed AWS using the `tf-aws` target.
-> It may not be supported by the Wing local simulator.
+> This example is only currently supported when deployed to AWS using the `tf-aws` target.
+> It may not be supported by the Wing local simulator. [Tracking issue](https://github.com/winglang/wing/issues/1383).
 
 An example of an app with a React front-end that allows users to upload files to an S3 bucket.
 
