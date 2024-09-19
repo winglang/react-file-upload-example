@@ -24,25 +24,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
         <form
           onSubmit={async (e) => {
             e.preventDefault();
 
             const file = e.target.file.files?.[0];
-
-            // console.error(presignedUrl);
 
             const image = await fetch(presignedUrl, {
               body: file,
@@ -52,10 +38,6 @@ function App() {
                 "Content-Disposition": `attachment; filename="${file.name}"`,
               },
             });
-
-            // console.error(image.status);
-            // console.error(image.statusText);
-            // console.error(image.url);
 
             // Redirect the user to the uploaded image
             window.location.href = image.url.split("?")[0];
